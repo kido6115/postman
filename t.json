@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "94cc70da-b03f-1ffe-d08a-c2bafee9ec11",
+		"name": "google",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4482624"
+	},
+	"item": [
+		{
+			"name": "FCM post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "key=AAAA5JCrgbw:APA91bFcPfPNN6LjFqrga4VXK7CmonOPsOn4ckRjreMg62EDF2nOenbKcq1vkRUKe9PcGwJb8rTidXViH5WhkJ92MwGRMn3QkWgHRkjDnyAZyu9nLrPSd_DN63oSdcwY7UnFOrR6mVSpUGei2zBRHAM2E3VQNCiEyQ"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"to\" : \"/topics/chcg\",\r\n \"data\" : {\r\n     \"body\" : \"公告公告公告\",\r\n     \"title\": \"彰化在地tttttt\"\r\n }\r\n}"
+				},
+				"url": {
+					"raw": "https://fcm.googleapis.com/fcm/send",
+					"protocol": "https",
+					"host": [
+						"fcm",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"fcm",
+						"send"
+					]
+				},
+				"description": "FCM post範本"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
